@@ -45,7 +45,7 @@ fn done(problem_id: String) {
         problem_id, problem_id
     );
 
-    // create main.rs
+    // git command
     Command::new("sh")
         .arg("-c")
         .arg(git)
