@@ -2,13 +2,14 @@ use std::env;
 use std::process::Command;
 
 fn new(problem_id: String) {
-    // format mkdir, touch and git commands
+    // format mkdir, touch, git, and open commands
     let mkdir = format!("mkdir solutions/{}", problem_id);
     let touch = format!("touch solutions/{}/main.rs", problem_id);
     let git = format!(
         "git add solutions/{}/main.rs && git commit -m \"create {}\"",
         problem_id, problem_id
     );
+    let open = format!("code solutions/{}", problem_id);
 
     // make folder under /solutions
     Command::new("sh")
@@ -32,6 +33,15 @@ fn new(problem_id: String) {
     Command::new("sh")
         .arg("-c")
         .arg(git)
+        .spawn()
+        .expect("error")
+        .wait()
+        .expect("error");
+
+    // open in vscode
+    Command::new("sh")
+        .arg("-c")
+        .arg(open)
         .spawn()
         .expect("error")
         .wait()
