@@ -44,8 +44,18 @@ impl Solution {
             }
 
             // check left and right
-            Solution::dfs(root.borrow().left, root.borrow().val, parent_val, result);
-            Solution::dfs(root.borrow().right, root.borrow().val, parent_val, result);
+            Solution::dfs(
+                root.borrow().left.clone(),
+                root.borrow().val,
+                parent_val,
+                result,
+            );
+            Solution::dfs(
+                root.borrow().right.clone(),
+                root.borrow().val,
+                parent_val,
+                result,
+            );
         }
     }
 }
