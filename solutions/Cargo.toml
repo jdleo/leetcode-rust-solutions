@@ -1,10 +1,7 @@
 [package]
-name = "leetcode-rust-solutions"
+name = "solutions"
 version = "0.1.0"
-edition = "2018"
-
-[workspace]
-members = ["solutions"]
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

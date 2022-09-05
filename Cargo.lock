@@ -5,3 +5,7 @@ version = 3
 [[package]]
 name = "leetcode-rust-solutions"
 version = "0.1.0"
+
+[[package]]
+name = "solutions"
+version = "0.1.0"
