@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-
+struct Solution;
 impl Solution {
     pub fn calculate_time(keyboard: String, word: String) -> i32 {
         let mut result: i32 = 0;

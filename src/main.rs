@@ -15,6 +15,10 @@ fn run(command: String) {
 fn new(problem_id: String) {
     // format system commands
     let create = format!("touch solutions/src/problem_{}.rs", problem_id);
+    let initstruct = format!(
+        "echo 'struct Solution;' >> solutions/src/problem_{}.rs",
+        problem_id
+    );
     let lib = format!("echo 'mod problem_{};' >> solutions/src/lib.rs", problem_id);
     let git = format!(
         "git add -A && git commit -m 'created problem {}'",

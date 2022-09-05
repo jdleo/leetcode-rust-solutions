@@ -1,3 +1,5 @@
+struct Solution;
+
 impl Solution {
     pub fn smaller_numbers_than_current(nums: Vec<i32>) -> Vec<i32> {
         // create vector for all nums (for counts) due to constraint 0 <= nums[i] <= 100

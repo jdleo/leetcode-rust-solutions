@@ -1,3 +1,4 @@
+struct Solution;
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -39,7 +40,7 @@ impl Solution {
         // if null root, don't do anything
         if let Some(root) = root {
             // check if grandparent value is even
-            if (grandparent_val & 1 == 0) {
+            if grandparent_val & 1 == 0 {
                 *result += root.borrow().val;
             }
 

@@ -1,3 +1,4 @@
+struct Solution;
 impl Solution {
     pub fn subtract_product_and_sum(mut n: i32) -> i32 {
         // running product and sum

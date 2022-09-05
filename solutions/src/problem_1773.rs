@@ -1,3 +1,5 @@
+struct Solution;
+
 impl Solution {
     pub fn count_matches(items: Vec<Vec<String>>, rule_key: String, rule_value: String) -> i32 {
         // figure out rule key index (to check items)

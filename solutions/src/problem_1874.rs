@@ -1,3 +1,5 @@
+struct Solution;
+
 impl Solution {
     pub fn min_product_sum(mut nums1: Vec<i32>, mut nums2: Vec<i32>) -> i32 {
         // sort array 1 ascending, array 2 descending

@@ -1,3 +1,5 @@
+struct Solution;
+
 impl Solution {
     pub fn most_words_found(sentences: Vec<String>) -> i32 {
         // 1. convert to iterator

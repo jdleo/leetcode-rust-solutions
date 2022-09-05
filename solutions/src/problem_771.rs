@@ -1,3 +1,4 @@
+struct Solution;
 use std::collections::HashSet;
 
 impl Solution {
@@ -13,7 +14,7 @@ impl Solution {
         // go through each stone
         for s in stones.chars() {
             // increment res if its a jewel
-            res += (jewels_set.contains(&s) as i32);
+            res += jewels_set.contains(&s) as i32;
         }
 
         res

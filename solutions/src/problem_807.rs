@@ -1,3 +1,4 @@
+struct Solution;
 use std::cmp::max;
 use std::cmp::min;
 

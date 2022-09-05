@@ -1,5 +1,5 @@
 use std::collections::HashSet;
-
+struct Solution;
 impl Solution {
     pub fn remove_vowels(s: String) -> String {
         // set of vowels

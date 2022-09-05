@@ -1,3 +1,4 @@
+struct Solution;
 impl Solution {
     pub fn count_bits(n: i32) -> Vec<i32> {
         // dp array with 0 at beginning
