@@ -37,3 +37,4 @@ mod problem_535;
 mod problem_771;
 mod problem_807;
 mod problem_938;
+mod problem_48;

@@ -1,58 +1,41 @@
 use std::env;
+use std::fmt::format;
 use std::process::Command;
 
-fn new(problem_id: String) {
-    // format mkdir, touch, git, and open commands
-    let mkdir = format!("mkdir solutions/{}", problem_id);
-    let touch = format!("touch solutions/{}/main.rs", problem_id);
-    let git = format!(
-        "git add solutions/{}/main.rs && git commit -m \"create {}\"",
-        problem_id, problem_id
-    );
-
-    // make folder under /solutions
+fn run(command: String) {
     Command::new("sh")
         .arg("-c")
-        .arg(mkdir)
-        .spawn()
-        .expect("error")
-        .wait()
-        .expect("error");
-
-    // create main.rs
-    Command::new("sh")
-        .arg("-c")
-        .arg(touch)
-        .spawn()
-        .expect("error")
-        .wait()
-        .expect("error");
-
-    // commit
-    Command::new("sh")
-        .arg("-c")
-        .arg(git)
+        .arg(command)
         .spawn()
         .expect("error")
         .wait()
         .expect("error");
 }
 
+fn new(problem_id: String) {
+    // format system commands
+    let create = format!("touch solutions/src/problem_{}.rs", problem_id);
+    let lib = format!("echo 'mod problem_{};' >> solutions/src/lib.rs", problem_id);
+    let git = format!(
+        "git add -A && git commit -m 'created problem {}'",
+        problem_id
+    );
+
+    // run all commands
+    run(create);
+    run(lib);
+    run(git);
+}
+
 fn done(problem_id: String) {
     // format git command
     let git = format!(
-        "git add solutions/{}/main.rs && git commit -m \"done with {}\"",
-        problem_id, problem_id
+        "git add -A && git commit -m 'finished problem {}'",
+        problem_id
     );
 
-    // git command
-    Command::new("sh")
-        .arg("-c")
-        .arg(git)
-        .spawn()
-        .expect("error")
-        .wait()
-        .expect("error");
+    // run all commands
+    run(git);
 }
 
 fn main() {
