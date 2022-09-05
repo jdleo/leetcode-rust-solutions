@@ -27,6 +27,7 @@ fn new(problem_id: String) {
 
     // run all commands
     run(create);
+    run(initstruct);
     run(lib);
     run(git);
 }
