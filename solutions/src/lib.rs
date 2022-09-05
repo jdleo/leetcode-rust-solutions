@@ -65,3 +65,4 @@ mod problem_1213;
 mod problem_39;
 mod problem_647;
 mod problem_49;
+mod problem_347;
