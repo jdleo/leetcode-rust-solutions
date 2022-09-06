@@ -70,3 +70,4 @@ mod problem_238;
 mod problem_191;
 mod problem_102;
 mod problem_242;
+mod problem_62;
