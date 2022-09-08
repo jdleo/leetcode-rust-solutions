@@ -78,3 +78,4 @@ mod problem_763;
 mod problem_1844;
 mod problem_1572;
 mod problem_1940;
+mod problem_2221;
