@@ -19,7 +19,10 @@ fn new(problem_id: String) {
         "echo 'struct Solution;' >> solutions/src/problem_{}.rs",
         problem_id
     );
-    let lib = format!("echo 'mod problem_{};' >> solutions/src/lib.rs", problem_id);
+    let lib = format!(
+        "rm solutions/src/lib.rs && echo 'mod problem_{};' >> solutions/src/lib.rs",
+        problem_id
+    );
     let git = format!(
         "git add -A && git commit -m 'created problem {}'",
         problem_id
