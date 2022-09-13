@@ -20,7 +20,6 @@ impl TreeNode {
 }
 
 use std::cell::RefCell;
-use std::cmp::Ordering::{Equal, Less};
 use std::rc::Rc;
 
 impl Solution {
