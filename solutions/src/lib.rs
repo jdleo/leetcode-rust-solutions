@@ -1,1 +1,1 @@
-mod problem_26;
+mod problem_2248;
