@@ -1,1 +1,2 @@
 struct Solution;
+struct Solution;
