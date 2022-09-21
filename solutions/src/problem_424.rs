@@ -1,6 +1,5 @@
 struct Solution;
 
-use std::cmp::max;
 use std::collections::HashMap;
 
 impl Solution {
